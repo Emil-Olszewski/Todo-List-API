@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Todo.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.GetOptions">
+            <summary>
+            Get a set of available operations 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.GetAll(Todo.WebAPI.ResourceParameters.TaskResourceParameters)">
+            <summary>
+            Get all tasks
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.Get(System.Guid)">
+            <summary>
+            Get particullar task
+            </summary>
+            <param name="id">The id of the task you want to get</param>
+            <returns></returns>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.Post(Todo.WebAPI.Models.DTOs.TaskInputDto)">
+            <summary>
+            Add a new task
+            </summary>
+            <param name="taskModel">The new task's model</param>
+            <returns></returns>
+             /// <returns></returns>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.Put(System.Guid,Todo.WebAPI.Models.DTOs.TaskInputDto)">
+            <summary>
+            Update a task
+            </summary>
+            <param name="id">The id of the task you want to update</param>
+            <param name="taskModel">The updated task's model</param>
+            <returns></returns>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.Patch(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Todo.WebAPI.Models.DTOs.TaskInputDto})">
+             <summary>
+             Partially update a task
+             </summary>
+             <param name="id">The id of the task you want to update</param>
+             <param name="patchDocument">The set of operations to apply to the task</param>
+             <returns></returns>
+             <remarks>
+             Sample request (this request mark the task as completed) \
+             PATCH /tasks/id \
+             [ \
+                 { \
+                     "op": "replace", \
+                     "path": "/completed", \
+                     "value": "true" \
+                 } \
+            ]    
+             </remarks>
+        </member>
+        <member name="M:Todo.WebAPI.Controllers.TasksController.Delete(System.Guid)">
+            <summary>
+            Delete a task
+            </summary>
+            <param name="id">The id of the tash you want to delete</param>
+            <returns></returns>
+        </member>
+        <member name="T:Todo.WebAPI.Models.DTOs.TaskInputDto">
+            <summary>
+            Task Input Data Transfer Object
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskInputDto.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskInputDto.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskInputDto.Priority">
+            <summary>
+            Priority: "Low", "Medium", "High"
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskInputDto.EstimatedCompletionTime">
+            <summary>
+            Until when you'd like to finish your task
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskInputDto.Completed">
+            <summary>
+            Maybe you already completed it
+            </summary>
+        </member>
+        <member name="T:Todo.WebAPI.Models.DTOs.TaskOutputDto">
+            <summary>
+            Task Output Data Transfer Object
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.Id">
+            <summary>
+            Task's Id
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.Title">
+            <summary>
+            Title of task
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.Description">
+            <summary>
+            Description of task
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.Priority">
+            <summary>
+            Task's priority. Possible values: "Low", "Medium" and "High".
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.EstimatedCompletionTime">
+            <summary>
+            Until when task should be completed
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.Models.DTOs.TaskOutputDto.Completed">
+            <summary>
+            Is task done alredy
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.ResourceParameters.TaskResourceParameters.TitlePhrase">
+            <summary>
+            What phrase should title contain?
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.ResourceParameters.TaskResourceParameters.DescriptionPhrase">
+            <summary>
+            What phrase should description contain?
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.ResourceParameters.TaskResourceParameters.CompletionCondition">
+            <summary>
+            Should tasks be only completed or only uncompleted? Values: "completed"/"uncompleted".
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.ResourceParameters.TaskResourceParameters.PageNumber">
+            <summary>
+            Page number (default: 1)
+            </summary>
+        </member>
+        <member name="P:Todo.WebAPI.ResourceParameters.TaskResourceParameters.PageSize">
+            <summary>
+            Tasks on page (default: 5)
+            </summary>
+        </member>
+    </members>
+</doc>
