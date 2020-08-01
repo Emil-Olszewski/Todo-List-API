@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Download and run project
+1. Download and open project
 2. Create a database. In console choose Todo.Infrasctructure as default project.  
 ```
 update-database -startupProject Todo.WebAPI
